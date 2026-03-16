@@ -1,14 +1,17 @@
 package org.example.task2.dto;
 
-public class CommentDTO {
+public class PostDTO {
 
-        String postId;
-        int id;
-        String name;
-        String email;
-        String body;
+        private String postId;
+        private int id;
+        private String name;
+        private String email;
+        private String body;
 
-        public CommentDTO(String postId, int id, String name, String email, String body) {
+    public PostDTO() {
+    }
+
+    public PostDTO(String postId, int id, String name, String email, String body) {
             this.postId = postId;
             this.id = id;
             this.name = name;
@@ -16,9 +19,29 @@ public class CommentDTO {
             this.body = body;
         }
 
-        @Override
+    public String getPostId() {
+        return postId;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    @Override
         public String toString() {
-            return "CommentDTO-{" +
+            return "PostDTO-{" +
                     "postId='" + postId + '\'' +
                     ", id=" + id +
                     ", name='" + name + '\'' +
